@@ -8,7 +8,7 @@ import javax.swing.*;
 public class Bzz2 extends JFrame /* implements ActionListener */{
     public void createUI() {
         this.setSize(100, 100);
-        JLabel label = new JLabel("(c) Duffy 2016");
+        JLabel label = new JLabel("Second Window");
         this.add(label);
         this.setVisible(true);
     }

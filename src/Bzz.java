@@ -19,6 +19,7 @@ public class Bzz extends JFrame {
 //        frame.getContentPane().setLayout(null);
         Bzz2 bzz2 = new Bzz2();
         JButton button = new JButton("Open second window");
+
 //        button.setLocation(100, 100);
 //        button.addActionListener(bzz2);
 
@@ -34,23 +35,52 @@ public class Bzz extends JFrame {
             }
         });
 
+        JButton button2 = new JButton("Show About");
+        button2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                JOptionPane.showMessageDialog(null, "(c) Daffy 2016");
+                //Execute when button is pressed
+//                System.out.println("You clicked the button2");
 
-        JLabel label = new JLabel("Bzz Label");
-        pan.add(label);
-        label.setBounds(100, 100, 100, 100 );
+//                Bzz2 bzz2 = new Bzz2();
+//                bzz2.createUI();
+            }
+        });
+
+        JButton button3 = new JButton("Exit");
+        button3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                System.exit(0);
+                //Execute when button is pressed
+//                System.out.println("You clicked the button2");
+
+//                Bzz2 bzz2 = new Bzz2();
+//                bzz2.createUI();
+            }
+        });
+
+//        JLabel label = new JLabel("Bzz Label");
+//        pan.add(label);
+//        label.setBounds(100, 100, 100, 100 );
 
 
 
         pan.setLayout(null);
 
         pan.add(button);
+        pan.add(button2);
+        pan.add(button3);
 
-        button.setBounds(100, 200, 200, 100);
+        button.setBounds(100, 100, 200, 50);
+        button2.setBounds(100, 200, 200, 50);
+        button3.setBounds(100, 300, 200, 50);
 
 
 
         frame.getContentPane().add(pan);
-        frame.setSize(400, 400);
+        frame.setSize(400, 800);
 //        frame.pack();
         frame.setVisible(true);
 
